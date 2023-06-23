@@ -1,5 +1,3 @@
-//Реализуйте 3 метода, чтобы в каждом из них получить разные исключения
-
 public class Task_1 {
     public static void main(String[] args) {
         String[] sArray = {"first str", null, "third str"};
@@ -9,19 +7,18 @@ public class Task_1 {
         printStringArray(sArray);
 
     }
-    // division by zero
+    
     public static void division(double firstNum, double secondNum){
         if(secondNum ==  0) throw new ArithmeticException("Не делим на ноль");
         double result = firstNum/secondNum;
         System.out.printf("В результате деления %f на %f получаем %f.\n", firstNum, secondNum, result);
     }
-    // out of bounds
+    
     public static void printValueByIndex(int[] array, int index){
         if(index > array.length-1) throw new ArrayIndexOutOfBoundsException("Элемента с данным индексом нет");
         else System.out.printf("Элемент с индексом %d равен %d.\n",index, array[index]);
     }
-
-    // Null pointer exception
+    
     public static void printStringArray(String[] sArray){
         for (String item: sArray){
             if(item == null) throw new NullPointerException("Элемента не существует");
